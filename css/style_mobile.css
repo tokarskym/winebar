@@ -1399,7 +1399,7 @@ div.error-message {
 @media (min-width: 948px) {
     .main_header {
         background-image: url('../img/main_bg_1024.jpg');
-        background-size: contain;
+        background-size: cover;
         max-height: 1500px;
         background-attachment: fixed;
     }
