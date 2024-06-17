@@ -1,0 +1,1416 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.hidden_test {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+html {
+    font-family: "League Spartan", sans-serif;
+    color: #FFFF;
+    font-style: normal;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    line-height: 16px;
+    letter-spacing: 2.5px;
+
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-style: normal;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 0.9rem;
+    text-align: justify;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+button {
+    background-color: none;
+    border: 1px solid white;
+    font-style: normal;
+    padding: 10px;
+    border-radius: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 18px;
+
+}
+
+.header_button {
+    border: 2px solid #ffff;
+    margin: 0;
+    background: linear-gradient(111deg, rgb(255 255 255 / 3%), rgb(255 255 255 / 34%));
+    backdrop-filter: blur(30px);
+    padding: 9px 12px;
+    font-size: 1.1rem;
+    letter-spacing: 2.5px;
+}
+
+
+/* Navbar in index & degustations & form */
+
+.navbar,
+.navbar-degustations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsla(0, 0%, 7%, 0.5);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-degustations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar-degustations a button {
+    border: none;
+    font-size: 0.75rem;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-degustations a button img {
+    width: 10px;
+}
+
+div.logo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.logo img {
+    height: 2.5rem;
+}
+
+.menu-btn {
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-btn img {
+    height: 1.25rem;
+}
+
+
+/*Main Page of the website  with 2 buttons */
+
+
+.main_header_title {
+    margin-top: 54px;
+}
+
+.main_header_title h3,
+.main_header_title p {
+    text-align: center;
+}
+
+.main_header_title h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+}
+
+.main_header_title p {
+    font-size: 1.2rem;
+    font-weight: 200;
+    font-family: "League Spartan", sans-serif;
+}
+
+.main_header_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('../img/modal_bg_image.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 2000;
+}
+
+.modal.modal-visible {
+    display: flex;
+    opacity: 1;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+}
+
+.modal-content .logo img {
+    height: 40px;
+    opacity: 0.3;
+}
+
+.close-btn {
+    color: #FFFF;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 100;
+    font-size: 2.4rem;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.menu-list li {
+    margin: 15px 0;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #FFFF;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* main page design */
+
+.main_header,
+.main_header_degustations {
+    background-image: url('../img/main_bg_mobile_version.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 70px;
+}
+
+.main_header_degustations {
+    background-image: url('../img/degustations_bg_mobile.jpg');
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+
+
+div.language-box,
+div.language-box p {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "League Spartan",
+        sans-serif;
+    color: white;
+    letter-spacing: 2.5px;
+    line-height: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+div.language-box p {
+    font-family: "League Spartan", sans-serif;
+    color: #FFFF;
+    font-style: normal;
+}
+
+.background-filler {
+    background-color: #852942;
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+
+div.relative-positioning {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+
+
+
+
+
+.about_us,
+.our_menu,
+.reservations,
+.degustations,
+.degustations2 {
+    background-color: #852942;
+    width: 100%;
+    height: auto;
+    height: 600px;
+    padding-bottom: 20px;
+}
+
+.about_us {
+    height: 800px;
+}
+
+.degustations {
+    height: 800px;
+}
+
+.degustations p {
+    padding-top: 75%;
+}
+
+
+.about_us img {
+    position: absolute;
+    top: -45px;
+    right: 0px;
+    width: 85%;
+    box-shadow: 0px 75px 100px -50px #A72046;
+}
+
+.reservations .reservations_photo,
+.degustations .degustations_photo,
+.degustations2 .degustations_photo2 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    box-shadow: 0px 75px 100px -50px #A72046;
+}
+
+
+div.wine-bar {
+    transform: rotate(-90deg);
+    position: absolute;
+    display: flex;
+    top: 125px;
+    left: -95px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.our_menu {
+    height: 700px;
+}
+
+.about_us h1.bar {
+    color: #852942;
+    margin-left: 15px;
+}
+
+.about_us p,
+.our_menu p {
+    padding-top: 80%;
+    font-weight: 400;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.our_menu p {
+    padding-top: 300px;
+    padding-bottom: 0;
+}
+
+
+
+div.filler {
+    width: 100%;
+    height: 160px;
+    background-color: #852942;
+    margin-top: -1px;
+}
+
+
+.menu_lines {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 18%;
+    transform: translate(-0%, -50%);
+}
+
+.menu_wines {
+    position: absolute;
+    left: 0;
+    top: -130px;
+    width: 60%;
+    box-shadow: 0px 75px 100px -50px #A72046;
+    max-width: 213px;
+}
+
+.our_menu h1 {
+    position: absolute;
+    color: #852942;
+    top: 30px;
+    right: 81px;
+    font-size: 32px;
+    width: 20%;
+}
+
+
+
+.our_menu button,
+.reservations button {
+    padding: 1rem 2rem;
+}
+
+.our_menu a {
+    position: absolute;
+    right: 5px;
+    top: 140px;
+}
+
+.reservations {
+    height: 1000px;
+}
+
+.reservations h1 {
+    text-align: center;
+    font-size: 32px;
+    padding-top: 70%;
+    position: relative;
+    z-index: 1;
+}
+
+.reservations h4 {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 28px;
+    letter-spacing: 2.5px;
+    text-align: center;
+}
+
+.reservations p,
+.degustations p,
+.degustations2 p {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+.degustations p {
+    padding-top: 75%;
+
+}
+
+.reservations a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.reservations {
+    padding-bottom: 0;
+}
+
+.footer {
+    background-color: #111111;
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    margin-bottom: -20px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-grid img {
+    margin-bottom: 30px;
+    width: 170px;
+    margin-top: 20px;
+}
+
+.footer-grid div {
+    margin-bottom: 30px;
+}
+
+.footer-grid p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.opening_hours {
+    margin-bottom: 40px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.social-media img {
+    width: 36px;
+}
+
+.social-media button {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main_header_degustations .container {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.main_header_degustations h1 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 40px;
+    letter-spacing: 0.8px;
+}
+
+
+.main_header_degustations p {
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 150px;
+}
+
+.container_for_degustations {
+    column-count: 1;
+    column-gap: 40px;
+}
+
+
+.degustations_div {
+    width: 100%;
+    height: auto;
+    background-color: #852942;
+    padding: 20px;
+    padding-bottom: 200px;
+    box-sizing: border-box;
+    margin-top: -1px;
+}
+
+.degustation.expanded {
+    height: auto;
+    transition: height 0.3s ease;
+}
+
+.degustation {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: height 0.3s ease;
+    overflow: hidden;
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    height: fit-content;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.degustation img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.degustation h2 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.degustation .date-container {
+    padding: 5px;
+    background-color: #A72046;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+}
+
+.degustation .date-container p {
+    font-size: 14px;
+    color: white;
+    font-family: "League Spartan", sans-serif;
+}
+
+.degustation hr {
+    width: 100%;
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+div.button-container {
+    position: relative;
+}
+
+.degustation div.button-container button.more-button {
+    color: #A72046;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: -20px;
+}
+
+.degustation div.button-container a {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+
+}
+
+p.shortDescription {
+    color: #333;
+    font-family: "League Spartan", sans-serif;
+    text-align: justify;
+    letter-spacing: 0;
+    margin-bottom: 40px;
+}
+
+.more-info {
+    display: none;
+    margin-top: 10px;
+    transition: display 0.3s ease;
+}
+
+.more-info p.description {
+    margin-bottom: 30px;
+}
+
+.more-info p {
+    margin: 5px 0;
+    color: #333;
+    font-family: "League Spartan", sans-serif;
+    letter-spacing: 0;
+}
+
+.more-info.visible {
+    display: block;
+}
+
+
+.degustation button {
+    background-color: #852942;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.degustation a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #852942;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.degustation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.degustation ul li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.degustation .place {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.degustations .relative-positioning,
+.degustations2 .relative-positioning {
+    height: 180px;
+}
+
+
+.degustations .degustations_photo,
+.degustations2 .degustations_photo2 {
+    top: 100px;
+    width: 70%;
+}
+
+.degustations2 {
+    padding-bottom: 0;
+    height: 900px;
+}
+
+.degustations {
+    height: 950px;
+}
+
+.degustations p {
+    padding-top: 78%;
+    padding-left: 10%;
+
+}
+
+.degustations2 p {
+    padding-top: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 90px;
+}
+
+div.form-bg {
+    background-color: #852942;
+    font-family: "League Spartan", sans-serif;
+    color: #FFFF;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+div.payment-methods-item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.payment-methods-item-wrapper img {
+    width: 100px;
+}
+
+#bookero-plugin {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+}
+
+h3.inquiry-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+div.inquiry-actions,
+div.details-popup-overlay {
+    display: none;
+}
+
+div.booker-plugin-form-car-step-2 {
+    max-width: 800px;
+    padding-top: 500px;
+    padding-bottom: 100px;
+}
+
+div.inquiry {
+    margin-bottom: 80px;
+}
+
+div.payment-section {
+    margin-top: 50px;
+}
+
+/* bookero div*/
+
+div.form-bg {
+    background: linear-gradient(135deg, #852942, #3c1344);
+    font-family: "League Spartan", sans-serif;
+    color: #FFFFFF;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+#bookero-plugin {
+    padding-top: 90;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2.bookero-plugin-header {
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h3.bookero-plugin-form-heading {
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.bookero-plugin-service-category-value,
+.bookero-plugin-service-value {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#bookero-plugin div.field {
+    margin-top: 20px;
+}
+
+#bookero-plugin div.field label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #E0E0E0;
+}
+
+#bookero-plugin-people-number {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #333333;
+    transition: all 0.3s ease;
+}
+
+#bookero-plugin-people-number:focus {
+    border-color: #852942;
+    box-shadow: 0 0 5px rgba(133, 41, 66, 0.5);
+}
+
+div.people-number-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.people-number-plus,
+div.people-number-minus {
+    background-color: #ffffff;
+    color: #852942;
+    border: 1px solid #CCCCCC;
+    padding: 8px 16px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+div.people-number-plus:hover,
+div.people-number-minus:hover {
+    background-color: #F0F0F0;
+}
+
+#bookero-plugin-termin {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #333333;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+#bookero-plugin-termin:focus {
+    border-color: #852942;
+    box-shadow: 0 0 5px rgba(133, 41, 66, 0.5);
+}
+
+div.required-fields-notice {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #FF0000;
+}
+
+button.submit-button {
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    color: #852942;
+    font-size: 16px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button.submit-button:hover {
+    background: linear-gradient(135deg, #f1f1f1, #e0e0e0);
+}
+
+/* Styling for people-number-wrapper input */
+.people-number-wrapper input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #852942;
+    border-radius: 10px;
+    background: #F5F5F5;
+    color: #333333;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.people-number-wrapper input:focus {
+    border-color: #3c1344;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px rgba(60, 19, 68, 0.5);
+}
+
+/* Styling for bookero-plugin-termin select */
+#bookero-plugin-termin {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #852942;
+    border-radius: 10px;
+    background: #F5F5F5;
+    color: #333333;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#bookero-plugin-termin:focus {
+    border-color: #3c1344;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px rgba(60, 19, 68, 0.5);
+}
+
+/* Styling for customer name input */
+#bookero-plugin-customer-name {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #852942;
+    border-radius: 10px;
+    background: #F5F5F5;
+    color: #333333;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#bookero-plugin-customer-name:focus {
+    border-color: #3c1344;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px rgba(60, 19, 68, 0.5);
+}
+
+/* Styling for customer email input */
+#bookero-plugin-customer-email {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #852942;
+    border-radius: 10px;
+    background: #F5F5F5;
+    color: #333333;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#bookero-plugin-customer-email:focus {
+    border-color: #3c1344;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px rgba(60, 19, 68, 0.5);
+}
+
+.vue-tel-input {
+    border: none;
+}
+
+/* Styling for telephone input */
+.vti__input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    background: #F5F5F5;
+    color: #333333;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.vti__input:focus {
+    border-color: #3c1344;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px rgba(60, 19, 68, 0.5);
+}
+
+button.back-button {
+    background: linear-gradient(135deg, #f1f1f1, #e0e0e0);
+    color: #852942;
+    font-size: 16px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button.back-button:hover {
+    background: linear-gradient(135deg, #e0e0e0, #d1d1d1);
+}
+
+button.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(133, 41, 66, 0.5);
+}
+
+div.error-message {
+    color: red;
+}
+
+/* Resetowanie marginów i paddingów dla przełączników */
+.switcher-wrapper {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.switcher {
+    width: 40px;
+    height: 20px;
+    background: #CCCCCC;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+    /* Zapobiega skalowaniu przełącznika */
+    margin: 0;
+    /* Resetowanie marginesów */
+    padding: 0;
+    /* Resetowanie paddingów */
+    box-sizing: border-box;
+    /* Upewnienie się, że wymiary są prawidłowe */
+}
+
+.switcher::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: left 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Assuming the switcher has a class 'is-active' when checked */
+.switcher.is-active {
+    background: #852942;
+}
+
+.switcher.is-active::before {
+    left: 21px;
+}
+
+.switcher-label {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    /* Resetowanie marginesów */
+    padding: 0;
+    /* Resetowanie paddingów */
+}
+
+.switcher-label a {
+    color: #852942;
+    text-decoration: underline;
+}
+
+.switcher-label .is-required {
+    color: #FF0000;
+}
+
+/*positioning absolute of the images*/
+
+.white-background {
+    height: 170px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.relative-positioning-container {
+    width: 100%;
+    height: auto;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* addons */
+
+.nav-responsive-container {
+    width: 90%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+@media (min-width: 420px) {
+    .our_menu a {
+        margin-right: 40px;
+    }
+}
+
+@media (min-width: 501px) {
+    .main_header {
+        background-position: center top;
+        height: 120vh;
+        background-image: url('../img/main_bg_tablet_version.jpg');
+    }
+}
+
+@media (min-width: 768px) {
+
+
+    .main_header {
+        background-image: url('../img/main_bg_768px.jpg');
+        background-size: cover;
+        max-height: 780px;
+        background-color: #852942;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    nav .nav-responsive-container a.hidden {
+        display: none;
+    }
+
+    nav.navbar,
+    .navbar-degustations {
+        padding: 0;
+        height: 70px;
+        width: 100%;
+    }
+
+    .main_header_title h3 {
+        margin-top: 150px;
+        font-size: 2rem;
+    }
+
+    .main_header_tittle p {
+        font-size: 1.8rem;
+    }
+
+    .main_header_buttons {
+        position: static;
+        transform: unset;
+    }
+
+    .relative-positioning {
+        margin: 0 auto;
+    }
+
+    .relative-positioning-container {
+        max-width: 768px;
+    }
+
+    .about_us .white-background {
+        height: 280px;
+    }
+
+    div.wine-bar {
+        font-size: 26px;
+        top: 195px;
+        left: -105px;
+    }
+
+    .about_us {
+        height: 800px;
+    }
+
+    .about_us img {
+        max-width: 630px;
+        top: -170px;
+    }
+
+    .about_us p,
+    .our_menu p,
+    .degustations p,
+    .degustations2 p {
+        font-size: 1.1rem;
+        line-height: 36px;
+        text-align: justify;
+        padding-top: 550px;
+    }
+
+    .about_us p {
+        padding-right: 0;
+        padding-top: 470px;
+    }
+
+    .reservations p {
+        font-size: 1.1rem;
+        line-height: 36px;
+        text-align: justify;
+        margin-bottom: 50px;
+    }
+
+    .degustations p {
+        padding-top: 560px;
+    }
+
+    img.menu_wines {
+        max-width: initial;
+        width: 50%;
+        top: -200px;
+        left: 0;
+    }
+
+    img.menu_lines {
+        display: none;
+    }
+
+    h1.menu {
+        font-size: 100px;
+        right: 155px;
+        top: 20px;
+    }
+
+    .our_menu {
+        height: 1100px;
+    }
+
+    .our_menu a {
+        right: 45px;
+        top: 230px;
+        margin: 0;
+    }
+
+    .our_menu button,
+    .reservations button {
+        padding: 2rem 4rem;
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    .reservations .white-background {
+        height: 300px;
+    }
+
+    .reservations {
+        height: 1200px;
+    }
+
+    .degustations {
+        height: 1100px;
+    }
+
+    .reservations h1 {
+        padding-top: 500px;
+        font-size: 60px;
+        margin-bottom: 60px;
+    }
+
+    .reservations h4 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    .before-footer-pic {
+        background-color: #852942;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    div#menu {
+        height: 280px;
+    }
+
+    .main_header_degustations {
+        background-image: url(../img/degustations_bg_tablet.jpg);
+        background-size: contain;
+        max-height: 780px;
+        background-color: #852942;
+        background-position: center top;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+
+    }
+
+    .main_header_degustations h1 {
+        font-size: 60px;
+        margin-top: 500px;
+    }
+
+    .main_header_degustations p {
+        font-size: 1.2rem;
+        line-height: 36px;
+        text-align: justify;
+    }
+
+    .container_for_degustations {
+        width: 90%;
+        max-width: 1024px;
+        padding: 100px 0px;
+        column-count: 2;
+    }
+
+    .degustations .white-background,
+    .degustations2 .white-background {
+        height: 280px;
+    }
+
+    .degustations2 {
+        height: 1200px;
+    }
+
+    .degustations2 .degustations_photo2,
+    .degustations .degustations_photo {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 948px) {
+    .main_header {
+        background-image: url('../img/main_bg_1024.jpg');
+        background-size: contain;
+        max-height: 1500px;
+        background-attachment: fixed;
+    }
+
+    .nav-responsive-container {
+        max-width: 1200px;
+    }
+
+
+
+
+
+
+}

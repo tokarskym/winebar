@@ -1,0 +1,300 @@
+.main-bg {
+    background-image: url("/img/main-bg.png");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-bg div {
+    display: flex;
+    justify-content: center;
+}
+
+.lines {
+    margin-top: 4rem;
+    position: relative;
+    align-items: center;
+}
+
+.lines a {
+    white-space: nowrap;
+    font-size: 1.25rem;
+    width: max-content;
+}
+
+.lines nav {
+    display: flex;
+    font-size: 2rem;
+    margin: 0 1em;
+    width: auto;
+    justify-content: center;
+    gap: 2em;
+    word-break: normal;
+}
+
+.lines::before,
+.lines::after {
+    border-top: 1px solid var(--text);
+    display: block;
+    height: 1px;
+    content: " ";
+    width: 100%;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.address {
+    text-align: center;
+}
+
+.arrow-container img {
+    display: none;
+}
+
+#winebar {
+    padding: 5rem var(--body-margin) 8rem var(--body-margin);
+}
+
+#winebar p {
+    text-align: justify;
+}
+
+#menu {
+    display: flex;
+    gap: 4em;
+}
+
+#menu .food-image {
+    width: 80%;
+    flex-grow: 2;
+    max-width: 100%;
+}
+
+#menu .menu-text {
+    padding: 0 var(--body-margin) 2rem 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+#rezerwacje {
+    display: flex;
+    gap: 8rem;
+}
+
+#rezerwacje .image-left {
+    display: flex;
+    align-items: end;
+    width: 50%;
+}
+
+#rezerwacje img {
+    height: 80%;
+}
+
+#rezerwacje .image-right {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 50%;
+}
+
+.center {
+    text-align: center;
+}
+
+.reservation-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+
+#kontakt {
+    padding: 5rem var(--body-margin) 8rem var(--body-margin);
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-section p {
+    font-size: 1.25rem;
+}
+
+#godziny {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#adres {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#google_maps {
+    margin-left: 2%;
+}
+
+.open-hours {
+    text-align: right;
+}
+
+
+footer {
+    display: flex;
+    padding: 2.5rem var(--body-margin) 2rem var(--body-margin);
+    justify-content: space-between;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-nav a {
+    display: inline-block;
+}
+
+footer .footer-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+footer .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+}
+
+img {
+    object-fit: contain;
+}
+
+img.cover {
+    object-fit: cover;
+    width: 100%;
+}
+
+.language {
+    height: 1.25rem;
+    object-fit: contain;
+}
+
+.text {
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    #rezerwacje {
+        flex-direction: column-reverse;
+        word-wrap: break-word;
+        gap: 2rem;
+    }
+
+    #rezerwacje .text .reservation-buttons {
+        padding: 0 var(--body-margin) 2rem var(--body-margin);
+        text-align: center;
+    }
+
+    #rezerwacje .image-right {
+        width: 100%;
+    }
+
+    #adres {
+        flex-direction: column;
+    }
+    
+    #google_maps {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .lines nav {
+        display: none;
+    }
+    .lines nav {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .lines::before, .lines::after {
+             display: none;
+         }
+    .main-bg img {
+        max-width: 80%;
+    }
+    .arrow-container img {
+        display: unset;
+        width: 30%;
+        margin-bottom: 3rem;
+    }
+
+    #menu {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #menu .food-image {
+        width: 100%;
+    }
+
+    #menu img {
+        max-width: 100%;
+    }
+
+    #menu .menu-text {
+        padding: 0 var(--body-margin) 2rem var(--body-margin);
+    }
+
+    #rezerwacje {
+        flex-direction: column-reverse;
+        word-wrap: break-word;
+        gap: 2rem;
+    }
+
+    #rezerwacje .text {
+        padding: 0 var(--body-margin) 2rem var(--body-margin);
+        text-align: center;
+    }
+
+    button {
+        margin-bottom: 1rem;
+    }
+
+    .reservation-buttons {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    section {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .contact-img {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+}
